@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var target = typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : self);
+          if (target && target.fetch) {
+            var _activeFetch = target.fetch.bind(target);
+            try {
+              Object.defineProperty(target, 'fetch', {
+                get: function() { return _activeFetch; },
+                set: function(val) { _activeFetch = val; },
+                configurable: true,
+                enumerable: true
+              });
+            } catch (inner) {
+              // fallback
+            }
+          }
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+    <title>SENA Elección Electrónica - Voto Glass</title>
+    <meta name="description" content="Sistema oficial de elección electrónica de representantes de aprendices SENA con arquitectura de escrutinio en tiempo real, interfaz glassmorphism y backend Supabase RPC." />
+    <meta property="og:title" content="SENA Elección Electrónica - Voto Glass" />
+    <meta property="og:description" content="Sistema oficial de elección electrónica de representantes de aprendices SENA con arquitectura de escrutinio en tiempo real, interfaz glassmorphism y backend Supabase RPC." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script type="module" crossorigin src="./assets/index-Cq_nHeR4.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-iaBIIrYg.css">
+  </head>
+  <body class="bg-[#f5fbf1] text-[#171d17] antialiased selection:bg-[#34D399]/30 selection:text-[#00682f]">
+    <div id="root"></div>
+  </body>
+</html>
+
